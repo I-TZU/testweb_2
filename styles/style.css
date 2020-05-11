@@ -1,0 +1,134 @@
+html {
+  /*font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
+  font-family: 'Noto Sans TC', sans-serif;
+  /*background-color: #E99E9E;*/
+}
+
+
+body{
+  width: 900px;
+  color: #FFF;
+  margin:0 auto;
+}
+
+#header{
+  background-color: #425660;
+  padding: 20px;
+}
+
+#nav{
+  background-color: #20292F;
+  padding: 5px;
+}
+
+#aside{
+  width: 200px;
+  height: 300px;
+  text-align: center;
+  background-color: #63808F;
+  padding:20px 10px;
+  float: left;
+}
+
+#section{
+  width: 640px;
+  height: 300px;
+  background-color: #849DAA;
+  line-height: 1.5em;
+  padding: 20px;
+  float: right;
+}
+
+#footer{
+  padding:20px;
+  background-color: #425660;
+  clear: both;
+}
+
+h1{
+  font-size: 18px;
+  color: #FFF;
+  text-align: center;
+}
+
+
+
+
+
+
+ul { /* 取消ul預設的內縮及樣式 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.drop-down-menu {
+  border: #ccc 1px solid;
+  display: inline-block;
+  /*font-family: 'Open Sans', Arial, sans-serif;*/
+  font-size: 14px;
+}
+
+ul.drop-down-menu li {
+  position: relative;
+  white-space: nowrap;
+  border-right: #ccc 1px solid;
+}
+
+ul.drop-down-menu > li:last-child {
+  border-right: none;
+}
+
+ul.drop-down-menu > li {
+  float: left; /* 只有第一層是靠左對齊*/
+}
+
+ ul.drop-down-menu a {
+  background-color: #fff;
+  color: #333;
+  display: block;
+  padding: 0 30px;
+  text-decoration: none;
+  line-height: 40px;
+}
+
+ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+  background-color: #ef5c28;
+  color: #fff;
+}
+
+ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+  background-color: #ef5c28;
+  color: #fff;
+}
+
+ul.drop-down-menu ul {
+  border: #ccc 1px solid;
+  position: absolute;
+  z-index: 99;
+  left: -1px;
+  top: 100%;
+  min-width: 180px;
+}
+
+ul.drop-down-menu ul li {
+  border-bottom: #ccc 1px solid;
+}
+
+ul.drop-down-menu ul li:last-child {
+  border-bottom: none;
+}
+
+ul.drop-down-menu ul ul { /*第三層以後的選單出現位置與第二層不同*/
+  z-index: 999;
+  top: 10px;
+  left: 90%;
+}
+
+ul.drop-down-menu ul { /*隱藏次選單*/
+  display: none;
+}
+
+ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+  display: block;
+}
