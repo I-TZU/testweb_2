@@ -6,37 +6,45 @@ html {
 
 
 body{
-  width: 900px;
+  /* width: 900px; */
+  width: 100%;
   color: #FFF;
   margin:0 auto;
 }
 
 #header{
+  width: 100%;
   background-color: #425660;
-  padding: 20px;
+  /* padding: 20px; */
+  position: fixed;
 }
 
 #nav{
-  background-color: #20292F;
+  /* background-color: #20292F; */
   /* padding: 5px; */
+  /* position: fixed; */
+  /* overflow: hidden; */
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  margin-top: 60px;
 }
 
 #aside{
-  width: 200px;
-  height: 300px;
-  text-align: center;
+  text-align: left;
   background-color: #63808F;
-  padding:20px 10px;
-  float: left;
+  line-height: 1.5em;
+  padding: 20px;
+  color: #FFFFFF;
+  flex: 1;
 }
 
 #section{
-  width: 640px;
-  height: 300px;
   background-color: #849DAA;
+  text-align: left;
   line-height: 1.5em;
   padding: 20px;
-  float: right;
+  flex: 4;
 }
 
 #footer{
@@ -55,13 +63,14 @@ h2.little-title {
   font-size: 18px
 }
 
-
+main.container {
+  display: flex;
+}
 
 
 
 
 nav > ul {
-    /* background-color: #20292F; */
     list-style: none;   /* 移除項目符號 */
     margin: 0;
     padding: 0;
