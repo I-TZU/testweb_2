@@ -1,28 +1,93 @@
 html, body {
-    margin: 0;
-  }
+    margin: 0px;  /*去外距*/
+    height: 100%; /*自動填滿瀏覽器高度*/
+	font-family: 'Rubik', sans-serif;
+}
 
-  .box {
+#app {
+    height: inherit; /*自動填滿瀏覽器高度*/
+    /*第一層flex--header、center、footer標籤垂直排列*/
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  .active {
-      order: -1;
-      flex: 1 0 100%;
-      background-color: #849DAA;
-  }
+    flex-direction: column;
+}
 
-  .active2 {
-      order: -1;
-      flex: 1 0 10%;
-      background-color: rgb(112, 176, 211);
-      height: 100vh;
-  }
+header {
+    /*height: 100px;*/ /*第一層flex--header固定高度*/
+    background-color: #3490C5;
+}
 
-  .active3 {
-      order: -1;
-      flex: 1 0 90%;
-      background-color: rgb(202, 226, 65);
-      height: 300vh;
-  }
+#center{
+    flex: 1; /*第一層flex--center中間包含aside與main填滿剩餘高度*/
+    display: flex; /*第二層flex--將aside與main標籤水平排列*/
+	
+}
+
+aside {
+    min-width: 150px; /*第二層flex--nav固定寬度*/
+    background-color: #9ED0E8;
+	padding: 25px; /*讓文字顯示不要貼著左邊開始*/
+	
+}
+
+main {
+    flex: 1; /*第二層flex---main填滿剩餘寬度*/
+    background-color: #DAE6EC;
+	padding: 25px
+	
+}
+
+#right div {
+	
+}
+
+footer {
+    height: 50px; /*第一層flex--footer固定高度*/
+    background-color: #3490C5;
+}
+
+
+
+
+
+
+.title {
+  font-size: 24px;
+  color: #FFF;
+  text-align: center;
+  line-height: 50px; /*標題垂直置中*/
+}
+
+
+
+
+
+
+
+nav > ul {
+    list-style: none;   /* 移除項目符號 */
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: inherit; /* 移除超連結顏色 */
+    display: block; /* 讓 <a> 填滿 <li> */
+    font-size: 1.2rem;
+    padding: 10px;
+    text-decoration: none;  /* 移除超連結底線 */
+}
+
+/* 滑鼠移到 <a> 時變成深底淺色 */
+nav li:hover {
+    background-color: rgb(115, 115, 115);
+    color: black;
+}
+
+.inline-block-nav {
+    text-align: center;
+    font-size: 0;   /* 移除 <li> 之間的空隙 */
+}
+
+.inline-block-nav > li {
+    display: inline-block;
+}

@@ -8,6 +8,7 @@ html {
 body{
   /* width: 900px; */
   width: 100%;
+  height: 100%;
   color: #FFF;
   margin:0 auto;
 }
@@ -22,35 +23,52 @@ body{
 #nav{
   /* background-color: #20292F; */
   /* padding: 5px; */
-  /* position: fixed; */
   /* overflow: hidden; */
   background-color: #333;
   position: fixed;
   width: 100%;
-  margin-top: 60px;
+  top: 60px;
 }
 
-#aside{
-  text-align: left;
+div.fixed {
+  position: fixed;
+  top: 120px;
+  bottom: 0px;
+  width: 100%;
+}
+
+#parent {
+  display: flex;
+  height: 100%;
+}
+#left {
+  flex-grow: 1;
   background-color: #63808F;
-  line-height: 1.5em;
   padding: 20px;
-  color: #FFFFFF;
-  flex: 1;
+  line-height: 1.5em;
+}
+#right {
+  flex-grow: 5;
+  background-color: #849DAA;
+  overflow: auto;
+  padding: 20px;
+  line-height: 1.5em;
+}
+#right div {
+  /* height: 300vh; */
 }
 
-#section{
-  background-color: #849DAA;
-  text-align: left;
-  line-height: 1.5em;
-  padding: 20px;
-  flex: 4;
-}
+
+
+
 
 #footer{
   padding:20px;
   background-color: #425660;
   clear: both;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 h1{
@@ -63,9 +81,7 @@ h2.little-title {
   font-size: 18px
 }
 
-main.container {
-  display: flex;
-}
+
 
 
 
